@@ -32,7 +32,13 @@
                         ]
                     },
                     "configurations": {
-                        "production": {
+                        "prodduction": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "src/enviroments/enviroments.ts",
+                                    "with": "src/enviroments/enviroment.prod.ts"
+                                }
+                            ],
                             "budgets": [
                                 {
                                     "type": "initial",
@@ -47,26 +53,25 @@
                             ],
                             "outputHashing": "all"
                         },
-                        
                         "development": {
-                            "buildOptimizer": false,
-                            "optimization": false,
-                            "vendorChunk": true,
-                            "extractLicenses": false,
-                            "sourceMap": true,
-                            "namedChunks": true
+                            "fileReplacements": [
+                                {
+                                    "replace": "src/enviroments/enviroments.ts",
+                                    "with": "src/enviroments/enviroment.dev.ts"
+                                }
+                            ]
                         }
                     },
-                    "defaultConfiguration": "production"
+                    "defaultConfiguration": "prod"
                 },
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
-                        "production": {
-                            "browserTarget": "smartwelding1:build:production"
+                        "prod": {
+                            "browserTarget": "smartwelding1:build:production:prod"
                         },
-                        "development": {
-                            "browserTarget": "smartwelding1:build:development"
+                        "dev": {
+                            "browserTarget": "smartwelding1:build:development:dev"
                         }
                     },
                     "defaultConfiguration": "development"

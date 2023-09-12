@@ -1,6 +1,8 @@
 export interface ICardUser{
+  id: number;
   avatar: string;
   name: string;
   age: number;
-  description: string
+  description: string,
+  work?: string
 }

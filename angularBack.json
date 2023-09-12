@@ -47,7 +47,14 @@
                             ],
                             "outputHashing": "all"
                         },
-                        
+                        "dev": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "src/enviroments/enviroments.ts",
+                                    "with": "src/enviroments/enviroment.dev.ts"
+                                }
+                            ]
+                        },
                         "development": {
                             "buildOptimizer": false,
                             "optimization": false,
@@ -65,8 +72,8 @@
                         "production": {
                             "browserTarget": "smartwelding1:build:production"
                         },
-                        "development": {
-                            "browserTarget": "smartwelding1:build:development"
+                        "dev": {
+                            "browserTarget": "smartwelding1:build:development:dev"
                         }
                     },
                     "defaultConfiguration": "development"

@@ -9,6 +9,7 @@ import { ICardUser } from '../icard-user.metadata';
 })
 export class CardUserComponent implements OnInit {
   @Input() data: ICardUser = {
+    id: 3,
     avatar: '',
     name: '',
     age: 1,
